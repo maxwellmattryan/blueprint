@@ -74,7 +74,7 @@
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -114,7 +114,7 @@
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -138,6 +138,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
+    <ClCompile Include="..\..\..\..\blueprint\core\blueprint_EcmascriptEngine.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\core\blueprint_GenericEditor.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\core\blueprint_ReactApplicationRoot.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -199,9 +205,6 @@
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\examples\eventloop\main.c">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\blueprint\duktape\examples\eventloop\ncurses.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\examples\eventloop\poll.c">
@@ -435,6 +438,9 @@
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hbuffer_alloc.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hbuffer_assert.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hbuffer_ops.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -468,7 +474,13 @@
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_heap_stringtable.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_heaphdr_assert.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hobject_alloc.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hobject_assert.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hobject_class.c">
@@ -484,6 +496,9 @@
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hobject_props.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hstring_assert.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-input\duk_hstring_misc.c">
@@ -729,6 +744,9 @@
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hbuffer_alloc.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hbuffer_assert.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hbuffer_ops.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -762,7 +780,13 @@
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_heap_stringtable.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_heaphdr_assert.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hobject_alloc.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hobject_assert.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hobject_class.c">
@@ -778,6 +802,9 @@
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hobject_props.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hstring_assert.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_hstring_misc.c">
@@ -867,6 +894,9 @@
     <ClCompile Include="..\..\..\..\blueprint\duktape\src-separate\duk_util_tinyrandom.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\tests\blueprint_EcmascriptEngineTests.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\yoga\benchmark\YGBenchmark.c">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -940,6 +970,294 @@
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\yoga\lib\fb\src\main\cpp\onload.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock-all.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock-cardinalities.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock-internal-utils.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock-matchers.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock-spec-builders.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\src\gmock_main.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-actions_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-cardinalities_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-generated-actions_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-generated-function-mockers_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-generated-internal-utils_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-generated-matchers_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-internal-utils_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-matchers_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-more-actions_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-nice-strict_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-port_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock-spec-builders_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_all_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_ex_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_leak_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_link_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_link2_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_output_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_stress_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\codegear\gtest_all.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\codegear\gtest_link.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample1.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample1_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample2.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample2_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample3_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample4.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample4_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample5_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample6_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample7_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample8_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample9_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample10_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-all.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-death-test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-filepath.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-port.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-printers.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-test-part.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-typed-test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest_main.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-death-test_ex_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-death-test_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-filepath_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-linked_ptr_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-listener_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-message_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-options_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-param-test_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-param-test2_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-port_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-printers_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-test-part_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-tuple_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-typed-test_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-typed-test2_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-unittest-api_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_all_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_break_on_failure_unittest_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_catch_exceptions_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_color_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_env_var_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_environment_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_filter_unittest_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_help_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_list_tests_unittest_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_main_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_no_test_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_output_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_pred_impl_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_premature_exit_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_prod_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_repeat_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_shuffle_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_sole_header_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_stress_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_throw_on_failure_ex_test.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_throw_on_failure_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_uninitialized_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_unittest.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_xml_outfile1_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_xml_outfile2_test_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_xml_output_unittest_.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\production.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\xcode\Samples\FrameworkSample\widget.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\xcode\Samples\FrameworkSample\widget_test.cc">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\blueprint\yoga\tests\CompactValueTest.cpp">
@@ -2954,13 +3272,17 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\core\blueprint_EcmascriptEngine.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\core\blueprint_GenericEditor.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ImageView.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_RawTextView.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ReactApplicationRoot.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ScrollView.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ScrollViewContentShadowView.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ShadowView.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_TextShadowView.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_TextView.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ThrottleMap.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_View.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\examples\alloc-hybrid\duk_alloc_hybrid.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\examples\alloc-logging\duk_alloc_logging.h"/>
@@ -2969,6 +3291,7 @@
     <ClInclude Include="..\..\..\..\blueprint\duktape\examples\codepage-conv\duk_codepage_conv.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\examples\debug-trans-dvalue\duk_trans_dvalue.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\examples\debug-trans-socket\duk_trans_socket.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\duktape\examples\eventloop\c_eventloop.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\extras\alloc-pool\duk_alloc_pool.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\extras\alloc-pool\ptrcomp_fixup.h"/>
     <ClInclude Include="..\..\..\..\blueprint\duktape\extras\cbor\duk_cbor.h"/>
@@ -3117,6 +3440,58 @@
     <ClInclude Include="..\..\..\..\blueprint\yoga\lib\fb\src\main\cpp\include\jni\LocalString.h"/>
     <ClInclude Include="..\..\..\..\blueprint\yoga\lib\fb\src\main\cpp\include\jni\Registration.h"/>
     <ClInclude Include="..\..\..\..\blueprint\yoga\lib\fb\src\main\cpp\include\jni\WeakReference.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\internal\custom\gmock-generated-actions.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\internal\custom\gmock-matchers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\internal\custom\gmock-port.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\internal\gmock-generated-internal-utils.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\internal\gmock-internal-utils.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\internal\gmock-port.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-actions.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-cardinalities.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-generated-actions.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-generated-function-mockers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-generated-matchers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-generated-nice-strict.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-matchers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-more-actions.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-more-matchers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock-spec-builders.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\include\gmock\gmock.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_link_test.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\custom\gtest-port.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\custom\gtest-printers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\custom\gtest.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-death-test-internal.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-filepath.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-internal.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-linked_ptr.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-param-util-generated.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-param-util.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-port-arch.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-port.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-string.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-tuple.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\internal\gtest-type-util.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-death-test.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-message.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-param-test.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-printers.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-spi.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-test-part.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest-typed-test.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest_pred_impl.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\include\gtest\gtest_prod.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\prime_tables.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample1.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample2.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample3-inl.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\samples\sample4.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\src\gtest-internal-inl.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-param-test_test.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest-typed-test_test.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\production.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\xcode\Samples\FrameworkSample\widget.h"/>
     <ClInclude Include="..\..\..\..\blueprint\yoga\lib\jni\real\jni.h"/>
     <ClInclude Include="..\..\..\..\blueprint\yoga\lib\jni\jni.h"/>
     <ClInclude Include="..\..\..\..\blueprint\yoga\yoga\CompactValue.h"/>
@@ -3891,6 +4266,65 @@
     <None Include="..\..\..\..\blueprint\yoga\android\README.md"/>
     <None Include="..\..\..\..\blueprint\yoga\java\CMakeLists.txt"/>
     <None Include="..\..\..\..\blueprint\yoga\lib\fb\src\main\cpp\CMakeLists.txt"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_5\CheatSheet.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_5\CookBook.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_5\Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_5\ForDummies.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_5\FrequentlyAskedQuestions.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_6\CheatSheet.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_6\CookBook.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_6\Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_6\ForDummies.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_6\FrequentlyAskedQuestions.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_7\CheatSheet.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_7\CookBook.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_7\Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_7\ForDummies.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\v1_7\FrequentlyAskedQuestions.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\CheatSheet.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\CookBook.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\DesignDoc.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\DevGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\ForDummies.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\FrequentlyAskedQuestions.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\docs\KnownIssues.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\test\gmock_output_test_golden.txt"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\CMakeLists.txt"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googlemock\README.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\AdvancedGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\DevGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\FAQ.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\Primer.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\PumpManual.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\Samples.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_5_AdvancedGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_5_Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_5_FAQ.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_5_Primer.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_5_PumpManual.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_5_XcodeGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_AdvancedGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_FAQ.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_Primer.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_PumpManual.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_Samples.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_6_XcodeGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_AdvancedGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_Documentation.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_FAQ.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_Primer.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_PumpManual.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_Samples.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\V1_7_XcodeGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\docs\XcodeGuide.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\test\gtest_output_test_golden_lin.txt"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\CMakeLists.txt"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\googletest\README.md"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\CMakeLists.txt"/>
+    <None Include="..\..\..\..\blueprint\yoga\lib\gtest\googletest\README.md"/>
     <None Include="..\..\..\..\blueprint\yoga\website\contents\contributing\opening-a-pull-request.md"/>
     <None Include="..\..\..\..\blueprint\yoga\website\contents\contributing\testing.md"/>
     <None Include="..\..\..\..\blueprint\yoga\website\contents\contributing\writing-documentation.md"/>
