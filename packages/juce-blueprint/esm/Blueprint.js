@@ -22,6 +22,10 @@ export function Image(props) {
   return React.createElement('Image', props, props.children);
 }
 
+export function AnimatedView(props) {
+  return React.createElement("AnimatedView", props, props.children);
+}
+
 function ScrollViewContentView(props) {
   return React.createElement('ScrollViewContentView', props, props.children);
 }

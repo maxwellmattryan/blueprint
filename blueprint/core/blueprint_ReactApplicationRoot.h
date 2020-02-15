@@ -11,6 +11,7 @@
 
 #include <map>
 
+#include "blueprint_AnimatedView.h"
 #include "blueprint_EcmascriptEngine.h"
 #include "blueprint_ImageView.h"
 #include "blueprint_RawTextView.h"
@@ -337,6 +338,13 @@ namespace blueprint
             registerViewType("ScrollViewContentView", []() -> ViewPair {
                 auto view = std::make_unique<View>();
                 auto shadowView = std::make_unique<ScrollViewContentShadowView>(view.get());
+
+                return {std::move(view), std::move(shadowView)};
+            });
+
+            registerViewType("AnimatedView", []() -> ViewPair {
+                auto view = std::make_unique<View>();
+                auto shadowView = std::make_unique<AnimatedView>(view.get());
 
                 return {std::move(view), std::move(shadowView)};
             });

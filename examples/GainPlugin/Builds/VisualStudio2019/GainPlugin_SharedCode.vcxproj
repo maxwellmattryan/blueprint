@@ -3272,6 +3272,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
+    <ClInclude Include="..\..\..\..\blueprint\core\blueprint_AnimatedView.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_EcmascriptEngine.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_GenericEditor.h"/>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_ImageView.h"/>

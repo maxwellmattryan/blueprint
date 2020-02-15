@@ -4074,6 +4074,9 @@
     <ClInclude Include="..\..\Source\PluginEditor.h">
       <Filter>GainPlugin\Source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\blueprint\core\blueprint_AnimatedView.h">
+      <Filter>JUCE Modules\blueprint\core</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\blueprint\core\blueprint_EcmascriptEngine.h">
       <Filter>JUCE Modules\blueprint\core</Filter>
     </ClInclude>

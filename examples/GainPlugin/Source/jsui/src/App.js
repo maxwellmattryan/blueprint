@@ -6,6 +6,7 @@ import {
   Image,
   View,
   Text,
+  AnimatedView
 } from 'juce-blueprint';
 
 
@@ -13,13 +14,18 @@ class App extends Component {
   render() {
     return (
       <View {...styles.container}>
-        <View {...styles.content}>
-          <Image source={require('./logo.svg')} {...styles.logo} />
-          <Slider paramId="MainGain" {...styles.knob}>
-            <Label paramId="MainGain" {...styles.label} />
-          </Slider>
-          <Meter {...styles.meter} />
-        </View>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>1</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>2</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>3</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>4</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>5</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>6</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>7</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>8</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>9</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>10</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>11</Text></AnimatedView>
+        <AnimatedView {...styles.cell}><Text {...styles.label}>12</Text></AnimatedView>
       </View>
     );
   }
@@ -27,43 +33,23 @@ class App extends Component {
 
 const styles = {
   container: {
+    'display': 'grid',
     'width': '100%',
     'height': '100%',
     'background-color': 'ff17191f',
+    'grid-template-columns': 'auto',
+    'grid-template-rows': 'auto'
+  },
+  cell: {
+    'width': 100,
+    'height': 100,
+    'flex': 0,
+    'background-color': 'ffefefef',
     'justify-content': 'center',
     'align-items': 'center',
-  },
-  content: {
-    'flex': 1.0,
-    'flex-direction': 'column',
-    'justify-content': 'space-around',
-    'align-items': 'center',
-    'padding': 24.0,
-    'max-width': 600,
-    'aspect-ratio': 400.0 / 240.0,
-  },
-  logo: {
-    'flex': 0.0,
-    'width': '80%',
-    'aspect-ratio': 281.6 / 35.0,
-    'placement': Image.PlacementFlags.centred,
-  },
-  knob: {
-    'min-width': 100.0,
-    'min-height': 100.0,
-    'width': '50%',
-    'height': '50%',
   },
   label: {
-    'flex': 1.0,
-    'justify-content': 'center',
-    'align-items': 'center',
-    'interceptClickEvents': false,
-  },
-  meter: {
-    'flex': 0.0,
-    'width': 100.0,
-    'height': 16.0,
+    'font-size': 24.0,
   },
 };
 
